@@ -43,6 +43,7 @@ public class RedisService {
     }
 
     //Distributed Locks
+    //Acquire a lock on a key with a value and timeout
     public boolean acquireLock(String key, String value, long timeout) {
         Boolean success = redisTemplate.opsForValue().setIfAbsent(key, value, timeout, TimeUnit.SECONDS);
         return Boolean.TRUE.equals(success);
