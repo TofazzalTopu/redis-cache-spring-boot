@@ -1,0 +1,7 @@
+spring:
+  redis:
+    host: localhost
+    port: 6379
+#    password: yourpassword # Omit if no password
+    database: 0
+#    timeout: 1000 # Omit if no timeout
